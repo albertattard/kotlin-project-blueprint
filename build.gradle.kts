@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm").version("1.3.61")
-    id("org.jlleitschuh.gradle.ktlint").version("9.1.1")
+    id("org.jlleitschuh.gradle.ktlint").version("9.2.1")
     id("com.github.ben-manes.versions").version("0.27.0")
 }
 
@@ -40,4 +40,4 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-engine:5.6.0")
 }
 
-defaultTasks("clean", "ktlintFormat", "dependencyUpdates", "build")
+defaultTasks("clean", "ktlintFormat", "dependencyUpdates", "test")
