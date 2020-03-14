@@ -4,14 +4,16 @@ plugins {
     id("com.github.ben-manes.versions").version("0.28.0")
 }
 
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
-}
+tasks {
+    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+        kotlinOptions.jvmTarget = "1.8"
+    }
 
-tasks.test {
-    useJUnitPlatform()
-    testLogging {
-        events("passed", "skipped", "failed")
+    test {
+        useJUnitPlatform()
+        testLogging {
+            events("passed", "skipped", "failed")
+        }
     }
 }
 
@@ -24,8 +26,8 @@ configurations {
     all {
         resolutionStrategy {
             force(
-                    "com.pinterest:ktlint:0.36.0",
-                    "com.pinterest.ktlint:ktlint-reporter-checkstyle:0.36.0"
+                "com.pinterest:ktlint:0.36.0",
+                "com.pinterest.ktlint:ktlint-reporter-checkstyle:0.36.0"
             )
         }
     }
@@ -37,7 +39,7 @@ dependencies {
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.6.0")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.6.0")
 }
 
 defaultTasks("clean", "ktlintFormat", "dependencyUpdates", "test")
