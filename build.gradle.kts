@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm").version("1.3.70")
+    kotlin("jvm").version("1.3.71")
     id("org.jlleitschuh.gradle.ktlint").version("9.2.1")
     id("com.github.ben-manes.versions").version("0.28.0")
 }
@@ -39,7 +39,7 @@ dependencies {
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.6.0")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.6.1")
 }
 
 defaultTasks("clean", "ktlintFormat", "dependencyUpdates", "test")
