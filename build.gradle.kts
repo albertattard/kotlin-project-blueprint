@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm").version("1.3.71")
+    kotlin("jvm").version("1.3.72")
     id("org.jlleitschuh.gradle.ktlint").version("9.2.1")
     id("com.github.ben-manes.versions").version("0.28.0")
 }
@@ -35,11 +35,11 @@ configurations {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.7")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-    testImplementation("org.junit.jupiter:junit-jupiter:5.6.1")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.7.0-M1")
 }
 
 defaultTasks("clean", "ktlintFormat", "dependencyUpdates", "test")
