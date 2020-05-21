@@ -1,1 +1,1 @@
-rootProject.name = "kotlin-pitest-example"
+rootProject.name = "kotlin-project-blueprint"
