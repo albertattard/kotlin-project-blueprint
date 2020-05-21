@@ -1,4 +1,4 @@
-package com.albertattard.blueprint
+package com.albertattard.example
 
 object Hello {
 

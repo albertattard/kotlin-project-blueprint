@@ -1,4 +1,4 @@
-package com.albertattard.blueprint
+package com.albertattard.example
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
